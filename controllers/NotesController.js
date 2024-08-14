@@ -58,7 +58,9 @@ const UpdateNote = async (req, res) => {
             { new: true }
         );
 
-        res.status(200).send("/notes");
+        res.status(200).json({
+            success: true
+        });
 
     } catch (err) {
         console.error(err);
