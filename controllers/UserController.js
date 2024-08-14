@@ -18,8 +18,9 @@ const Register = async (req, res) => {
         const token = generateToken(payload);
         console.log("token is : ",token);
         res.status(201).json({
-            message: 'Account Created',
-            token
+            success :true,
+            user:user,
+            token:token
         });
     } catch (err) {
         console.log(err);
@@ -50,7 +51,9 @@ const Login = async (req, res) => {
         const token = generateToken(payload);
         console.log("token is : ",token);
         res.status(200).json({
-          token
+            success :true,
+            user:user,
+            token:token
         });
 
     } catch (err) {
