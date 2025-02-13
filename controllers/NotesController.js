@@ -1,3 +1,4 @@
+
 const Notes = require('../models/NotesSchema');
 
 const CreateNote = async (req, res) => {
